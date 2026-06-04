@@ -964,7 +964,7 @@ elif "Granger" in section:
         r"for forecasting lnRV of stock **B**, beyond B's own history."
     )
     st.latex(
-        r"\Delta y_{B,t} = \alpha + \sum_{k=1}^{p}\phi_k y_{B,t-k} "
+        r"y_{B,t} = \alpha + \sum_{k=1}^{p}\phi_k y_{B,t-k} "
         r"+ \sum_{k=1}^{p}\psi_k y_{A,t-k} + \varepsilon_t"
     )
 
@@ -1057,6 +1057,11 @@ elif "Granger" in section:
         st.latex(
             r"y_{B,t} = \beta_0 + \beta_1 y_{B,t-1} + \beta_2 y^{(5)}_{B,t-1} "
             r"+ \beta_3 y^{(22)}_{B,t-1} + \beta_4 y_{A,t-1} + \varepsilon_t"
+        )
+        st.markdown(
+            "We use the same expanding window design (last 50%, horizon $h=1$, "
+            "re-estimated at each step) and compare MFE and RMSE against the "
+            "standard HAR to assess whether the additional information improves forecasts."
         )
 
         if D['gc_fore'] is None:
