@@ -31,7 +31,7 @@ TICKERS = [
     'DOW','GS','HD','HON','IBM','INTC','JNJ','JPM','MCD','MRK',
     'MSFT','NKE','PG','CRM','TRV','UNH','VZ','V','WBA','WMT',
 ]
-RES  = Path('HW4_results')
+RES  = Path('.')
 CMAP = plt.cm.tab20(np.linspace(0, 1, 30))
 
 # ── CSS ────────────────────────────────────────────────────────────────────────
