@@ -31,7 +31,7 @@ TICKERS = [
     'DOW','GS','HD','HON','IBM','INTC','JNJ','JPM','MCD','MRK',
     'MSFT','NKE','PG','CRM','TRV','UNH','VZ','V','WBA','WMT',
 ]
-RES  = Path('.')
+RES  = Path('HW4_results')
 CMAP = plt.cm.tab20(np.linspace(0, 1, 30))
 
 # ── CSS ────────────────────────────────────────────────────────────────────────
@@ -502,7 +502,7 @@ elif "Log Realized" in section:
             with sub_tbl:
                 styled = adf.style.format(precision=4)
                 if rej_col:
-                    styled = styled.applymap(
+                    styled = styled.map(
                         lambda v: 'background-color:#d4edda'
                                   if v is True or str(v) == 'True'
                                   else ('background-color:#f8d7da'
@@ -1008,7 +1008,7 @@ elif "Granger" in section:
                 if fstat_col:
                     styled = styled.background_gradient(cmap='RdYlGn', subset=[fstat_col])
                 if sig_col:
-                    styled = styled.applymap(
+                    styled = styled.map(
                         lambda v: 'background-color:#d4edda'
                                   if v is True or v == 'True'
                                   else ('background-color:#f8d7da'
