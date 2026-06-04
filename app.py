@@ -572,19 +572,20 @@ consistent with well-documented long memory in realized variance.
                       beta_cols[1] if len(beta_cols) > 1 else beta_cols[0])
             b3 = next((c for c in beta_cols if 'M' in c or '3' in c),
                       beta_cols[2] if len(beta_cols) > 2 else beta_cols[0])
-            persistence = har[beta_cols].sum(axis=1)
+            persistence = har[b1] + har[b2] + har[b3]
 
             # ── Average summary on top ─────────────────────────────────────────
             st.markdown("#### Average Coefficients — All 30 Stocks")
             mc1, mc2, mc3, mc4 = st.columns(4)
-            mc1.metric(f"Avg β₁  Daily",   f"{har[b1].mean():.4f}")
-            mc2.metric(f"Avg β₂  Weekly",  f"{har[b2].mean():.4f}")
-            mc3.metric(f"Avg β₃  Monthly", f"{har[b3].mean():.4f}")
+            mc1.metric("Avg β₁  Daily",        f"{har[b1].mean():.4f}")
+            mc2.metric("Avg β₂  Weekly",       f"{har[b2].mean():.4f}")
+            mc3.metric("Avg β₃  Monthly",      f"{har[b3].mean():.4f}")
             mc4.metric("Avg Persistence (Σβ)", f"{persistence.mean():.4f}")
             info(
                 f"Daily dominates: avg β₁ ≈ {har[b1].mean():.3f} "
                 f"vs β₂ ≈ {har[b2].mean():.3f} vs β₃ ≈ {har[b3].mean():.3f}. "
-                "Persistence ≈ 0.95 confirms near-unit-root long memory in lnRV."
+                f"Avg persistence β₁+β₂+β₃ ≈ {persistence.mean():.3f} — "
+                "near-unit-root long memory in lnRV."
             )
 
             st.divider()
