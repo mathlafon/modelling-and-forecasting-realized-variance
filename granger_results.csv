@@ -1,0 +1,31 @@
+Group,Cause → Effect,Min p-value,Max F-stat,Best lag,Significant 5%,p(lag 1),p(lag 2),p(lag 3),p(lag 4),p(lag 5)
+Financial,GS → JPM,0.0,67.51,1,True,0.0,0.0,0.0,0.0,0.0
+Financial,GS → AXP,0.0,143.59,1,True,0.0,0.0,0.0,0.0,0.0
+Financial,JPM → GS,0.0,315.91,1,True,0.0,0.0,0.0,0.0,0.0
+Financial,JPM → AXP,0.0,276.24,1,True,0.0,0.0,0.0,0.0,0.0
+Financial,AXP → GS,0.0,285.72,1,True,0.0,0.0,0.0,0.0,0.0
+Financial,AXP → JPM,0.0,271.67,1,True,0.0,0.0,0.0,0.0,0.0
+Tech,AAPL → MSFT,0.0,79.74,1,True,0.0,0.0,0.0,0.0,0.0
+Tech,AAPL → CSCO,0.0,182.52,1,True,0.0,0.0,0.0,0.0,0.0
+Tech,MSFT → AAPL,0.0,32.88,1,True,0.0,0.0002,0.0151,0.1197,0.0413
+Tech,MSFT → CSCO,0.0,164.55,1,True,0.0,0.0,0.0,0.0,0.0
+Tech,CSCO → AAPL,0.0,97.86,1,True,0.0,0.0,0.0,0.0002,0.003
+Tech,CSCO → MSFT,0.0,172.87,1,True,0.0,0.0,0.0,0.0,0.0
+Consumer,KO → MCD,0.0,242.6,1,True,0.0,0.0,0.0,0.0,0.0
+Consumer,KO → WMT,0.0,258.27,1,True,0.0,0.0,0.0,0.0,0.0
+Consumer,MCD → KO,0.0,267.78,1,True,0.0,0.0,0.0,0.0,0.0
+Consumer,MCD → WMT,0.0,321.22,1,True,0.0,0.0,0.0,0.0,0.0
+Consumer,WMT → KO,0.0,191.5,1,True,0.0,0.0,0.0,0.0,0.0
+Consumer,WMT → MCD,0.0,241.05,1,True,0.0,0.0,0.0,0.0,0.0
+Cross-sector,KO → GS,0.0,90.89,1,True,0.0,0.0,0.0,0.0,0.0
+Cross-sector,KO → CVX,0.0,66.56,1,True,0.0,0.0,0.0,0.0,0.0
+Cross-sector,GS → KO,0.0,206.32,1,True,0.0,0.0,0.0,0.0,0.0
+Cross-sector,GS → CVX,0.0,103.53,1,True,0.0,0.0,0.0,0.0,0.0
+Cross-sector,CVX → KO,0.0,173.99,1,True,0.0,0.0,0.0,0.0,0.0
+Cross-sector,CVX → GS,0.0,130.48,1,True,0.0,0.0,0.0,0.0,0.0
+DOW pairs,DOW → GS,0.0,23.72,1,True,0.0,0.0001,0.0026,0.002,0.0057
+DOW pairs,DOW → AAPL,0.0144,6.02,1,True,0.0144,0.2673,0.6035,0.8494,0.9375
+DOW pairs,GS → DOW,0.0,20.33,1,True,0.0,0.0124,0.0354,0.0873,0.2169
+DOW pairs,GS → AAPL,0.0,34.01,1,True,0.0,0.0009,0.028,0.042,0.0139
+DOW pairs,AAPL → DOW,0.0002,14.21,1,True,0.0002,0.0037,0.0103,0.0204,0.0088
+DOW pairs,AAPL → GS,0.0,43.48,1,True,0.0,0.0,0.0,0.0,0.0
